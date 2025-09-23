@@ -1,0 +1,10 @@
+01 EMPFILE-RECORD.
+   05 EMP-ID          PIC 9(05)     COMP-3.
+   05 EMP-NAME        PIC X(25).
+   05 EMP-DEPT        PIC X(22).
+   05 EMP-SALARY      PIC 9(5)      COMP-3.
+   05 EMP-JOIN-DATE   PIC 9(8).
+   05 EMP-GRADE       PIC 9(2).
+   05 EMP-WORK-HOURS  PIC 9(3)V99.
+   05 EMP-STATUS      PIC X.
+   05 EMP-BONUS       PIC 9(5).

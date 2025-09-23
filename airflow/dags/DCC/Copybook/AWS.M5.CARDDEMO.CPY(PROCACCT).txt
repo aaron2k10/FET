@@ -1,0 +1,6 @@
+        01 EMPFILE-RECORD.                                              00010000
+           05 EMP-ID       PIC X(05).                                   00020000
+           05 EMP-NAME     PIC X(15).                                   00030000
+           05 EMP-DESG     PIC X(10).                                   00040000
+           05 EMP-SALARY   PIC X(10).                                   00050000
+           05 FILLER       PIC X(40).                                   00060000

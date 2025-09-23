@@ -1,0 +1,50 @@
+{% extends "base.html" %} 
+{%load static%}
+
+
+{% block css_files %}
+<!--link rel="stylesheet" href= "{% static 'index.css' %}" /-->
+{% endblock %}
+
+{%block content%}
+    <!--CARDS ON HOME PAGE-->
+    <div class="row1">
+        <div class="column1">
+          <div class="card">
+            <h3>Number of Jobs <i class="fas fa-check-circle"></i>Executed</h3>
+            <p>894</p>
+          </div>
+        </div>
+      
+        <div class="column2">
+          <div class="card">
+            <h3>Number of Comparisons<i class="fa-solid fa-code-compare"></i></h3>
+            <p>456</p>
+          </div>
+        </div>
+        
+        <div class="column3">
+          <div class="card">
+            <h3>Number of Matched Comparisons<i class="fas fa-equals"></i></h3>
+            <p>450</p>
+          </div>
+        </div>
+
+        <div class="column4">
+            <div class="card">
+              <h3>Number of Mismatched Comparisons<i class="fas fa-not-equal"></i></h3>
+              <p>6</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="card2">
+        <h3 style="color:black;">Files/Tables</h3>
+      </div>
+
+      
+
+{% endblock %}
+{% block js_files %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

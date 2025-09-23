@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+   DBC
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href= "{% static 'jobrun.css' %}" />
+{% endblock %}
+
+{% block content %}
+<body>
+  <div class="row">
+    <div class="column11">
+        <div class="card">
+            <h3>Job Details<i class="fa-solid fa-circle-info"></i></h3>
+            <form method="POST" action="{% url 'jobrun' %}">
+                {% csrf_token %}
+                <button class="button1" type="submit">Show job details</button>
+            </form>
+            
+            <div class="output">
+              {% if output_data %}
+                  <div class="excel-output">
+                      {{ output_data|safe }}
+                  </div>
+              {% else %}
+                  <p>No output to display yet.</p>
+              {% endif %}
+          </div>
+        </div>
+    </div>
+    
+    <div class="column22">
+        <div class="card">
+            <h3>Pull Files<i class="fa-solid fa-code-pull-request"></i></h3>
+            <form method="POST" action="{% url 'input_pull' %}">
+                {% csrf_token %}
+                <button class="button1" type="submit">Input Pull</button>
+            </form>
+            <div class="output">
+              {% if input_pull_output %}
+                  <div class="output-message">
+                      {{ input_pull_output }}
+                  </div>
+              {% else %}
+<!--                  <p>No input pull output yet.</p>-->
+              {% endif %}
+            </div>
+
+            <form method="POST" action="{% url 'output_pull' %}">
+                {% csrf_token %}
+                <button class="button1" type="submit">Output Pull</button>
+            </form>
+            <div class="output">
+              {% if output_pull_output %}
+                  <div class="output-message">
+                      {{ output_pull_output }}
+                  </div>
+              {% else %}
+<!--                  <p>No output pull output yet.</p>-->
+              {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="column33">
+        <div class="card">
+            <h3>ASCII Conversion<i class="fa-solid fa-code-compare"></i></h3>
+            <button class="button1">Convert</button>
+        </div>
+    </div>
+</div>
+
+</body>
+{% endblock %}
+
+{% block js_files %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

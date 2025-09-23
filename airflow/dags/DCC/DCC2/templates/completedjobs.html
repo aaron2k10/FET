@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+{%load static%}
+
+
+{% block css_files %}
+<!--link rel="stylesheet" href= "{% static 'index.css' %}" /-->
+<link rel="stylesheet" href= "{% static 'complete.css' %}" >
+{% endblock %}
+
+{%block content%}
+<body>
+<div class="row">
+    <div class="column11">
+        <div class="card">
+            <h3>Job Details<i class="fa-solid fa-circle-info"></i></h3>
+            <form method="POST" action="{% url 'completedjobs' %}">
+                {% csrf_token %}
+<!--                <button class="button1" type="submit">Completed</button>-->
+            </form>
+
+            <div class="output">
+              {% if output_data %}
+                  <div class="excel-output">
+                      {{ output_data|safe }}
+                  </div>
+              {% else %}
+                  <p>No output to display yet.</p>
+              {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}
+
+{% block js_files %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

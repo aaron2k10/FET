@@ -1,0 +1,10 @@
+       01  EMPLOYEE-RECORD.                                             00010001
+           05  EMP-ID               PIC 9(5)       COMP-3.              00020001
+           05  EMP-NAME             PIC X(25).                          00030002
+           05  EMP-DEPT             PIC X(20).                          00040002
+           05  EMP-SALARY           PIC 9(7)V99    COMP-3.              00050001
+           05  EMP-JOIN-DATE        PIC 9(8).                           00060001
+           05  EMP-GRADE            PIC 9(2).                           00080001
+           05  EMP-WORK-HOURS       PIC 9(3)V99.                        00100001
+           05  EMP-STATUS           PIC X.                              00110001
+           05  EMP-BONUS            PIC 9(5).                           00130001

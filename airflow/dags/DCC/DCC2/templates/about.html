@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+{%load static%}
+
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "DCC2/static/about.css" %}"  />
+{% endblock %}
+
+
+{%block content%}
+
+<div class="infopage">
+    <h1>Information Page</h1>
+</div>
+
+
+{% endblock %}
+
+
+{% block js_files %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

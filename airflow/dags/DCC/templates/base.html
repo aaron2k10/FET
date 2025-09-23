@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>DCC Dashboard</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'jobrun.css' %}" />
+    <link rel="stylesheet" href="{% static 'about.css' %}" />
+    <link rel="stylesheet" href="{% static 'joballocation.css' %}" />
+    <style>
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+      }
+
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        background-color: #ccc;
+        border-radius: 24px;
+        width: 100%;
+        height: 100%;
+        transition: background-color 0.3s;
+      }
+
+      .slider::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        left: 4px;
+        bottom: 2px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.3s;
+      }
+
+      .toggle-switch input:checked + .slider {
+        background-color: #4caf50;
+      }
+
+      .toggle-switch input:checked + .slider::before {
+        transform: translateX(26px);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="{% static 'images/dcc_logo.png' %}" alt="dcc logo" />DCC FET
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </nav>
+
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <li class="item">
+            <a href="{% url 'home' %}" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+              <span class="navlink">Home</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="{% url 'joballocation' %}" class="nav_link">
+              <span class="navlink_icon">
+                <i class='bx bx-grid-alt'></i>
+              </span>
+              <span class="navlink">Job Allocation</span>
+            </a>
+          </li>
+          <li class="item" id="jobDetails">
+            <a href="{% url 'jobrun' %}" class="nav_link">
+              <span class="navlink_icon">
+                <i class='bx bx-play'></i>
+              </span>
+              <span class="navlink">Job Details</span>
+            </a>
+          </li>
+          <li class="item" id="jobRun">
+            <a href="{% url 'sas' %}" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-loader-circle"></i>
+              </span>
+              <span class="navlink">Job Run</span>
+            </a>
+          </li>
+          <li class="item" id="completedJobs">
+            <a href="{% url 'completedjobs' %}" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-filter"></i>
+              </span>
+              <span class="navlink">Completed Jobs</span>
+            </a>
+          </li>
+          <li class="item" id="compareReports">
+            <a href="{% url 'comparereports' %}" class="nav_link">
+              <span class="navlink_icon">
+                <i class='bx bx-note'></i>
+              </span>
+              <span class="navlink">Compare Reports</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="{% url 'about' %}" class="nav_link">
+              <span class="navlink_icon">
+                <i class='bx bx-info-circle'></i>
+              </span>
+              <span class="navlink">About</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="/" class="nav_link">
+              <span class="navlink_icon">
+                <i class='bx bx-info-circle'></i>
+              </span>
+              <span class="navlink">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+      document.querySelector('.toggle-switch input').addEventListener('change', function() {
+        const jobDetails = document.getElementById('jobDetails');
+        const jobRun = document.getElementById('jobRun');
+        const completedJobs = document.getElementById('completedJobs');
+        const compareReports = document.getElementById('compareReports');
+
+        if (this.checked) {
+          jobDetails.style.display = 'none';
+          jobRun.style.display = 'none';
+          completedJobs.style.display = 'none';
+          compareReports.style.display = 'block';
+        } else {
+          jobDetails.style.display = 'block';
+          jobRun.style.display = 'block';
+          completedJobs.style.display = 'block';
+          compareReports.style.display = 'block';
+        }
+      });
+    </script>
+  </body>
+  {% block content %}
+{% endblock %}
+</html>

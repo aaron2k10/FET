@@ -1,0 +1,10 @@
+       01  RECORD-80.
+           05  NAME             PIC X(10).
+           05  EMPLOYEE_NO      PIC X(10).
+           05  LOCATION         PIC X(10).
+           05  SEX              PIC X(5).
+           05  DEGREE           PIC X(5).
+           05  DESIGNATION      PIC X(10).
+           05  SALARY           PIC X(10).
+           05  YEARS_OF_EXP     PIC X(10).
+           05  FILLER           PIC X(10).

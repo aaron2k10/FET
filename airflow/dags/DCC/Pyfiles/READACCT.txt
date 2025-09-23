@@ -1,0 +1,12 @@
+{"EMP-ID": "E0001", "EMP-NAME": "SARAVAN", "EMP-DESG": "DIR", "EMP-DEPT": "DEPT", "EMP-LOC": "1LOC2", "EMP-SALARY": "000010000", "FILLER-1": "0                           00000100"}
+{"EMP-ID": "E0002", "EMP-NAME": "GOWRE", "EMP-DESG": "MGR", "EMP-DEPT": "DEPT", "EMP-LOC": "1LOC1", "EMP-SALARY": "000008000", "FILLER-1": "0                           00000200"}
+{"EMP-ID": "E0003", "EMP-NAME": "PRAVEEN", "EMP-DESG": "MGR", "EMP-DEPT": "DEPT", "EMP-LOC": "2LOC2", "EMP-SALARY": "000007500", "FILLER-1": "0                           00000300"}
+{"EMP-ID": "E0004", "EMP-NAME": "PRIYA", "EMP-DESG": "TL", "EMP-DEPT": "DEPT", "EMP-LOC": "1LOC1", "EMP-SALARY": "000005000", "FILLER-1": "0                           00000400"}
+{"EMP-ID": "E0005", "EMP-NAME": "SHEELA", "EMP-DESG": "SSE", "EMP-DEPT": "DEPT", "EMP-LOC": "1LOC1", "EMP-SALARY": "000004500", "FILLER-1": "0                           00000500"}
+{"EMP-ID": "E0006", "EMP-NAME": "DHARSHINI", "EMP-DESG": "SE", "EMP-DEPT": "DEPT", "EMP-LOC": "1LOC1", "EMP-SALARY": "000003400", "FILLER-1": "0                           00000600"}
+{"EMP-ID": "E0007", "EMP-NAME": "HARISH", "EMP-DESG": "SSE", "EMP-DEPT": "DEPT", "EMP-LOC": "2LOC1", "EMP-SALARY": "000004600", "FILLER-1": "0                           00000700"}
+{"EMP-ID": "E0008", "EMP-NAME": "RAJU", "EMP-DESG": "MGR", "EMP-DEPT": "DEPT", "EMP-LOC": "2LOC2", "EMP-SALARY": "000007500", "FILLER-1": "0                           00000800"}
+{"EMP-ID": "E0009", "EMP-NAME": "PRAKASH", "EMP-DESG": "TL", "EMP-DEPT": "DEPT", "EMP-LOC": "1LOC1", "EMP-SALARY": "000005000", "FILLER-1": "0                           00000900"}
+{"EMP-ID": "E0010", "EMP-NAME": "KISHORE", "EMP-DESG": "SSE", "EMP-DEPT": "DEPT", "EMP-LOC": "1LOC1", "EMP-SALARY": "000004500", "FILLER-1": "0                           00001000"}
+{"EMP-ID": "E0011", "EMP-NAME": "SHARUN", "EMP-DESG": "SE", "EMP-DEPT": "DEPT", "EMP-LOC": "1LOC1", "EMP-SALARY": "000003400", "FILLER-1": "0                           00001100"}
+{"EMP-ID": "E0012", "EMP-NAME": "RAKESH", "EMP-DESG": "SSE", "EMP-DEPT": "DEPT", "EMP-LOC": "2LOC1", "EMP-SALARY": "000004600", "FILLER-1": "0                           00001200"}

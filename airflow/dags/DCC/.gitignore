@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+ 
+# Virtual Environments
+airflow_env2/
+ 
+# IDE
+.idea/
+ 
+# DB and Secrets
+db.sqlite3
+.env
+ 
+# Windows Shortcuts and Office Files
+*.lnk
+*.vsdx
+ 

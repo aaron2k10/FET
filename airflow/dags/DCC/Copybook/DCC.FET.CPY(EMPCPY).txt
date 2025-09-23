@@ -1,0 +1,6 @@
+       01 EMPFILE-RECORD.
+           05 EMP-ID       PIC X(05).
+           05 EMP-NAME     PIC X(15).
+           05 EMP-DESG     PIC X(10).
+           05 EMP-SALARY   PIC 9(10).
+           05 FILLER       PIC X(40).

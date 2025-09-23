@@ -1,0 +1,7 @@
+       01  EMPLOYEE-RECORD.
+                  05  EMPLOYEE-ID              PIC X(5).
+                  05  EMPLOYEE-NAME            PIC X(15).
+                  05  EMPLOYEE-DESG            PIC X(10).
+                  05  SALARY                   PIC X(10).
+                  05  EMPLOYEE-RECORD          PIC X(5).
+                  05  FILLER                   PIC X(35).
