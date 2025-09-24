@@ -16,4 +16,5 @@ db.sqlite3
 # Windows Shortcuts and Office Files
 *.lnk
 *.vsdx
- 
+# Ignore Zone.Identifier files
+*Zone.Identifier
