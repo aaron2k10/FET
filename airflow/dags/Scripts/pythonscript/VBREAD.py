@@ -13,8 +13,8 @@ logging.basicConfig(level=logging.INFO)
 profile = {
         "host": "192.86.32.87",
         "port": "10443",
-        "user": "cgdevds",
-        "password": "Capgem20"
+        "user": "cgdevsk",
+        "password": "cgdevsk"
     }
 
 def parse_copybook(copybook_path):
@@ -63,10 +63,10 @@ try:
     try:
         # Copy the dataset
         zos_files.ds.copy_data_set_or_member(source_dataset, target_dataset)
-        zos_files.ds.download(target_dataset, f'/home/kalharis/airflow/dags/Scripts/Pyfiles/CGDEVPB.DCC.VBNEW3.OUT.txt')
-        zos_files.ds.download(copybook, f'/home/kalharis/airflow/dags/Scripts/Copybook/{copybook}.txt')
-        copybook_structure = parse_copybook(f'/home/kalharis/airflow/dags/Scripts/Copybook/{copybook}.txt')
-        write_file('/home/kalharis/airflow/dags/Scripts/Pyfiles/CGDEVPB.DCC.VBNEW3.OUT.txt', '/home/kalharis/airflow/dags/Scripts/Pyfiles/CGDEVPB.DCC.VBNEW3.OUT.txt', copybook_structure)
+        zos_files.ds.download(target_dataset, f'/home/arunkua/airflow/dags/Scripts/Pyfiles/CGDEVPB.DCC.VBNEW3.OUT.txt')
+        zos_files.ds.download(copybook, f'/home/arunkua/airflow/dags/Scripts/Copybook/{copybook}.txt')
+        copybook_structure = parse_copybook(f'/home/arunkua/airflow/dags/Scripts/Copybook/{copybook}.txt')
+        write_file('/home/arunkua/airflow/dags/Scripts/Pyfiles/CGDEVPB.DCC.VBNEW3.OUT.txt', '/home/arunkua/airflow/dags/Scripts/Pyfiles/CGDEVPB.DCC.VBNEW3.OUT.txt', copybook_structure)
     except Exception as e:
         logging.error(f"Error copying dataset: {e}")
         raise

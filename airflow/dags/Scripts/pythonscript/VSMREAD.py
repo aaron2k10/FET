@@ -40,24 +40,24 @@ def write_file(file_path, outfile_path, copybook_structure):
 profile = {
     "host": "192.86.32.87",
     "port": "10443",
-    "user": "cgdevds",
-    "password": "capgem20"
+    "user": "cgdevsk",
+    "password": "cgdevsk"
 }
 
 # Initialize Zowe and Files object
 zos_files = Files(profile)
 vsam_dataset = 'CGDEVPB.DCC.VSAMREAD.KSDS'
 copybook = 'AWS.M5.CARDDEMO.CPY(READACCT)'
-file_path = "/home/kalharis/airflow/dags/Scripts/Pyfiles/READACCT.txt"
+file_path = "/home/arunkua/airflow/dags/Scripts/Pyfiles/READACCT.txt"
 zos_files.ds.download(vsam_dataset, file_path)
-zos_files.ds.download(copybook, '/home/kalharis/airflow/dags/Scripts/Copybook/vsamcpybk.cpy')
+zos_files.ds.download(copybook, '/home/arunkua/airflow/dags/Scripts/Copybook/vsamcpybk.cpy')
 
 command = [
-    'python', '/home/kalharis/airflow/dags/Scripts/src/mdu.py', 'parse', '/home/kalharis/airflow/dags/Scripts/Copybook/vsamcpybk.cpy', '/home/kalharis/airflow/dags/Scripts/sample-json/vsamcpybk.json'
+    'python', '/home/arunkua/airflow/dags/Scripts/src/mdu.py', 'parse', '/home/arunkua/airflow/dags/Scripts/Copybook/vsamcpybk.cpy', '/home/arunkua/airflow/dags/Scripts/sample-json/vsamcpybk.json'
 ]
 result = subprocess.run(command, capture_output=True, text=True)
 
-with open('/home/kalharis/airflow/dags/Scripts/sample-json/vsamcpybk.json') as f:
+with open('/home/arunkua/airflow/dags/Scripts/sample-json/vsamcpybk.json') as f:
     data = json.load(f)
 
 
@@ -97,7 +97,7 @@ with open(file_path, "w") as file:
             value = str(row[field_name]).ljust(field_length)
             line += value
         file.write(line + "\n")
-zos_files.ds.download(copybook, f'/home/kalharis/airflow/dags/Scripts/Copybook/{copybook}.txt')
-copybook_structure = parse1_copybook(f'/home/kalharis/airflow/dags/Scripts/Copybook/{copybook}.txt')
+zos_files.ds.download(copybook, f'/home/arunkua/airflow/dags/Scripts/Copybook/{copybook}.txt')
+copybook_structure = parse1_copybook(f'/home/arunkua/airflow/dags/Scripts/Copybook/{copybook}.txt')
 write_file(file_path, file_path, copybook_structure)
 print(f"Data has been successfully written to {file_path}.")
